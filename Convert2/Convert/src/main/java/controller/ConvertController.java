@@ -45,6 +45,14 @@ public class ConvertController {
 
     public void Convert(ActionEvent actionEvent) {
         ok=true;
+        if(fx_amount.getText().equals("")){
+            fx_hibaamount.setText("Nem lehet üres a mező!");
+            ok=false;
+        }
+        if(fx_currency.getText().equals("")){
+            fx_hiba_currency.setText("Nem lehet üres a mező!");
+            ok=false;
+        }
          amount = Double.parseDouble(fx_amount.getText());
          if(amount<0) {
              ok = false;
